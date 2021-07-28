@@ -141,7 +141,31 @@ let odd = arr.filter((val)=>val%2!==0)
 console.log(odd)
 
 
+
+
+
 // 7) all strings to titlecaps in an array
+let titleCase = function(str) {
+  return str.toLowerCase().split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+console.log(titleCase("I'm a little tea pot"));
+
+
+
+
+
+
 
 // 8) rotate an array by k times and return the rotated array
+
+const rotateArr = function(arr, k) {
+for (let i = 0; i < k; i++) {
+      nums.unshift(arr.pop());
+  }
+
+  return arr;
+}
+rotateArr([1,2,3,4,5],2)
 
